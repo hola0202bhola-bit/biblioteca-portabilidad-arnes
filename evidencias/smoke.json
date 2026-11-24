@@ -1,0 +1,13 @@
+{
+  "fechaUTC": "2026-11-24T18:46:22.791Z",
+  "comprobaciones": [
+    "GET real al proceso compilado: 200 y lista vacía",
+    "POST real al entrypoint: 201 y préstamo ACTIVO"
+  ],
+  "procesoTerminado": true,
+  "codigo": null,
+  "signal": "SIGTERM",
+  "salida": [
+    "API ficticia: http://127.0.0.1:50403/api/v1/prestamos\n"
+  ]
+}

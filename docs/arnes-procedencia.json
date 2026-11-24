@@ -1,0 +1,88 @@
+{
+  "repositorio": "https://github.com/hola0202bhola-bit/ecclesia-arnes-codex",
+  "commit": "473533a7b9e4e479e8c76d2835a6e2cecb9d662e",
+  "mainRemoto": "473533a7b9e4e479e8c76d2835a6e2cecb9d662e\trefs/heads/main",
+  "archivos": [
+    {
+      "ruta": "core/AGENTS.base.md",
+      "sha256": "0d759462d3719ec2b15ec4a1238fbdd2ff8f53c2a2571160be307f8aa3f48eff",
+      "blobGit": "414a68ea1731d7dadb985772ec8da1b9c9ce8b98"
+    },
+    {
+      "ruta": "core/arquitectura/README.md",
+      "sha256": "03a96883f802d3f9f54177450aa644f0d5b86785dad7f1ab3b44611e40e29fa8",
+      "blobGit": "6813cb03e7537d1ad81874aa7901a1a8258af250"
+    },
+    {
+      "ruta": "core/checklists/revision.md",
+      "sha256": "1934d21c3ac26f4cc25f17477134c10ee9e2f0231a3c69859a31864321d7245b",
+      "blobGit": "af1e88ef42a840cf730611565db768019b22e299"
+    },
+    {
+      "ruta": "core/checklists/terminado.md",
+      "sha256": "d6dacd2ee09c9f0cbb50498b089c3a98193acaece104f0bbc17689b0f8a75e3c",
+      "blobGit": "6555198101f1c9b36e127205512bc80aa59fd0fd"
+    },
+    {
+      "ruta": "core/prompts/migracion.md",
+      "sha256": "44d5b86cef95b3c23d31175819ea7d13b2bf2869f0d7378c831ad42c251398ee",
+      "blobGit": "20447a087a88f5d1c1252797c5eaedee8ff0bfc0"
+    },
+    {
+      "ruta": "core/prompts/nuevo-endpoint.md",
+      "sha256": "789db4ad41de6e4d88590dba1e62787150bce79ce8450930b4ef5b798c8b7fa4",
+      "blobGit": "1fa25f7fb663804e94b1177884cedc359720d8a9"
+    },
+    {
+      "ruta": "core/prompts/nuevo-modulo.md",
+      "sha256": "b41301213712fd28ca6289527578a2845d3c710e340b9726dd6cfead006e43fc",
+      "blobGit": "a60defb0a59ae823aa7de6f9696a738aec841acb"
+    },
+    {
+      "ruta": "core/prompts/pruebas.md",
+      "sha256": "0baaac1e3511c3d7d52d53f9371c28a41276535bc45227551b709e4f3849957c",
+      "blobGit": "f6588f2d87f8a473c30813568c2ff239569acea1"
+    },
+    {
+      "ruta": "core/prompts/revision.md",
+      "sha256": "a5161aba51a0a1f1f5dbe30b7e0f941150b56c741e1a561276843b3e71ad91d1",
+      "blobGit": "e5388bcdedd9eac5733a8b395aca3dff65b42b7b"
+    },
+    {
+      "ruta": "eslint.config.mjs",
+      "sha256": "b2673a7ded031744c3297b44a5d71f68fd3fb33bb0861c97726eea451be50376",
+      "blobGit": "03fbc1e0612ca508b954381629ac17aca2869483"
+    },
+    {
+      "ruta": "package-lock.json",
+      "sha256": "d3ff7a76f26180d4fafbb016cbbb908e55ed3c28f783c5e0ef74f03524546546",
+      "blobGit": "d1ce5d565577f3dd2c9e6f6c7726c278cc2661c5"
+    },
+    {
+      "ruta": "package.json",
+      "sha256": "d1927a0e5b1e9115edb0548b5b02606acb3df4a985a9f6ef9defba6bb2437f39",
+      "blobGit": "5466367dd41ed6d93437ae6848f19d4a4f173435"
+    },
+    {
+      "ruta": "scripts/check-architecture.mjs",
+      "sha256": "7c44bb53b3a142a469d975dff268feacc133d1b42dad0447f3fba0e48a214fd8",
+      "blobGit": "b3cb5a68f307f3336fee7f551e23804e5fd1b96a"
+    },
+    {
+      "ruta": "scripts/validate-contract.mjs",
+      "sha256": "082b89997e14fed60bfd702a1c74b818e4ed583baf26c2bf47d58b3bd0ccba68",
+      "blobGit": "7541b5f111db5c66f320fdab4906473e290af8a7"
+    },
+    {
+      "ruta": "stacks/express/dependency-cruiser.cjs",
+      "sha256": "559c7058a862d21245a0557913f93be17b11e5bdf1e1ea16ad06ae6f2d4780cb",
+      "blobGit": "4d4cfdfee47e8c7afc8cd5fa7aa97ee505e7298f"
+    },
+    {
+      "ruta": "stacks/express/ecclesia-security-policy.json",
+      "sha256": "ce0f9a56dc87d38617ca0747f84d8982bcef225e759c47c72aec626da9a07083",
+      "blobGit": "4d1b42cc782cb0892e17acdec5c80230054a07fa"
+    }
+  ],
+  "verificacion": "Comparación byte por byte con git show del commit clonado, y SHA256 de cada archivo. Sin cambios en estos archivos."
+}

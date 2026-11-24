@@ -1,0 +1,7 @@
+{
+  "salida": 1,
+  "rechazoPor": "dominio-puro, provocado en índice y copia de trabajo",
+  "headCreado": false,
+  "fuenteRestaurada": true,
+  "alcance": "Hook adaptado de biblioteca; no hook Ecclesia. Intento real de git commit rechazado antes del primer commit."
+}

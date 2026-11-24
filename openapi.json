@@ -1,0 +1,288 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Biblioteca ficticia: portabilidad del arnés",
+    "version": "1.0.0",
+    "description": "API educativa solo en loopback, memoria efímera y sin autenticación. Identificadores y lectores ficticios."
+  },
+  "paths": {
+    "/api/v1/prestamos": {
+      "get": {
+        "operationId": "listarPrestamos",
+        "responses": {
+          "200": {
+            "description": "Resultado del caso de uso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["items", "pagina", "tamano", "total"],
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Prestamo"
+                      }
+                    },
+                    "pagina": {
+                      "type": "integer"
+                    },
+                    "tamano": {
+                      "type": "integer"
+                    },
+                    "total": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida o JSON inválido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000000,
+              "default": 1
+            }
+          },
+          {
+            "name": "tamano",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20
+            }
+          }
+        ]
+      },
+      "post": {
+        "operationId": "crearPrestamo",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AltaPrestamo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Resultado del caso de uso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Prestamo"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Entrada inválida o JSON inválido",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No existe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflicto de estado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Cuerpo excesivo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/prestamos/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "operationId": "consultarPrestamo",
+        "responses": {
+          "200": {
+            "description": "Resultado del caso de uso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Prestamo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No existe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/prestamos/{id}/devolucion": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "operationId": "devolverPrestamo",
+        "responses": {
+          "200": {
+            "description": "Resultado del caso de uso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Prestamo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No existe",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflicto de estado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Prestamo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "ejemplarId", "lector", "estado"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ejemplarId": {
+            "type": "string",
+            "pattern": "^LIB-[0-9]{3}$"
+          },
+          "lector": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          },
+          "estado": {
+            "type": "string",
+            "enum": ["ACTIVO", "DEVUELTO"]
+          }
+        }
+      },
+      "AltaPrestamo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ejemplarId", "lector"],
+        "properties": {
+          "ejemplarId": {
+            "type": "string",
+            "pattern": "^LIB-[0-9]{3}$"
+          },
+          "lector": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 60
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["codigo", "mensaje", "detalles"],
+        "properties": {
+          "codigo": {
+            "type": "string"
+          },
+          "mensaje": {
+            "type": "string"
+          },
+          "detalles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

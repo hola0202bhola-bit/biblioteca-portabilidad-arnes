@@ -1,0 +1,10 @@
+Arnés íntegro: 16 archivos de 473533a7b9e4e479e8c76d2835a6e2cecb9d662e
+file:///C:/Users/NoobMaster69/Documents/Codex/2026-11-24/referenced-chatgpt-conversation-this-is-an-2/work/biblioteca-portabilidad/vendor/arnes/scripts/check-architecture.mjs:61
+    throw new Error(
+          ^
+
+Error: Arquitectura inválida: [{"type":"dependency","from":"src/modules/prestamos/domain/prestamo.ts","to":"src/modules/prestamos/infrastructure/memoria.ts","unresolvedTo":"../infrastructure/memoria.js","dependencyTypes":["local","import"],"rule":{"severity":"error","name":"dominio-puro"}},{"type":"cycle","from":"src/modules/prestamos/domain/prestamo.ts","to":"src/modules/prestamos/infrastructure/memoria.ts","unresolvedTo":"../infrastructure/memoria.js","dependencyTypes":["local","import"],"rule":{"severity":"error","name":"sin-ciclos"},"cycle":[{"name":"src/modules/prestamos/infrastructure/memoria.ts","dependencyTypes":["local","import"]},{"name":"src/modules/prestamos/domain/prestamo.ts","dependencyTypes":["local","type-only","import"]}]}]
+    at checkArchitecture (file:///C:/Users/NoobMaster69/Documents/Codex/2026-11-24/referenced-chatgpt-conversation-this-is-an-2/work/biblioteca-portabilidad/vendor/arnes/scripts/check-architecture.mjs:61:11)
+    at file:///C:/Users/NoobMaster69/Documents/Codex/2026-11-24/referenced-chatgpt-conversation-this-is-an-2/work/biblioteca-portabilidad/scripts/check.mjs:33:35
+
+Node.js v24.22.2

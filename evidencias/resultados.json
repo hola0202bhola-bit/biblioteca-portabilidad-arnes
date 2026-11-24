@@ -1,0 +1,74 @@
+{
+  "fechaUTC": "2026-11-24T18:46:22.409Z",
+  "sintetico": true,
+  "alcance": "API de biblioteca independiente, datos ficticios; no es gate de Ecclesia ni video",
+  "node": "v24.22.2",
+  "plataforma": "win32",
+  "arnes": "473533a7b9e4e479e8c76d2835a6e2cecb9d662e",
+  "resultados": [
+    {
+      "nombre": "01-aceptacion",
+      "esperado": 0,
+      "salida": 0,
+      "coincide": true,
+      "inicio": "2026-11-24T18:46:09.188Z",
+      "duracionMs": 3910,
+      "detalle": "Proyecto completo conforme a las reglas."
+    },
+    {
+      "nombre": "02-rechazo-arquitectura",
+      "esperado": 1,
+      "salida": 1,
+      "coincide": true,
+      "inicio": "2026-11-24T18:46:13.099Z",
+      "duracionMs": 801,
+      "detalle": "Importación prohibida domain -> infrastructure; verificar dominio-puro."
+    },
+    {
+      "nombre": "03-rechazo-negocio",
+      "esperado": 1,
+      "salida": 1,
+      "coincide": true,
+      "inicio": "2026-11-24T18:46:14.096Z",
+      "duracionMs": 3828,
+      "detalle": "RN01 alterada: se consideran ocupados los devueltos en lugar de los activos. Deben fallar pruebas HTTP de duplicado/concurrencia y ciclo."
+    },
+    {
+      "nombre": "04-aceptacion-restaurada",
+      "esperado": 0,
+      "salida": 0,
+      "coincide": true,
+      "inicio": "2026-11-24T18:46:17.928Z",
+      "duracionMs": 4481,
+      "detalle": "Restauración byte por byte; vuelve a aceptar el proyecto."
+    }
+  ],
+  "restaurados": true,
+  "fuentes": [
+    {
+      "ruta": "src/composition/app.ts",
+      "sha256": "cfdabef3750c5f5094b3079084aa52d9a1c78a5a31ae73ec9d1e311511fbf250"
+    },
+    {
+      "ruta": "src/composition/server.ts",
+      "sha256": "0f4ffdc770643af7bddc872a39149bf2d5a6aab1b9b8c7cd82fa739e851b90db"
+    },
+    {
+      "ruta": "src/modules/prestamos/application/servicio.ts",
+      "sha256": "0349b76408e8848f1d065d902bf84b294128d2a22884c2e5f5ace075139bab21"
+    },
+    {
+      "ruta": "src/modules/prestamos/domain/prestamo.ts",
+      "sha256": "03922bc76c31ced7310fc14f64689e922248c23320dc6c6753012f5ac61bf158"
+    },
+    {
+      "ruta": "src/modules/prestamos/infrastructure/memoria.ts",
+      "sha256": "40aaad440c20d6c160497b5a10e94e8c0d5e9b27e3a3299c3f93ebbdf98175b3"
+    },
+    {
+      "ruta": "src/modules/prestamos/presentation/rutas.ts",
+      "sha256": "63b79ca73c79251a6a27120061bbd4c3c73b6d706475bf43771694b635551e01"
+    }
+  ],
+  "fallo": null
+}

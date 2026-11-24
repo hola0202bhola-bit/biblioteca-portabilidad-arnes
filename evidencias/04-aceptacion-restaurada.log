@@ -1,0 +1,146 @@
+Arnés íntegro: 16 archivos de 473533a7b9e4e479e8c76d2835a6e2cecb9d662e
+Arquitectura real: { expected: 6, analyzed: 6, violations: 0 }
+OpenAPI válido; la ejecución HTTP se comprueba después.
+Checking formatting...
+All matched files use Prettier code style!
+TAP version 13
+# Subtest: RF01/RF02: alta, consulta, devolución, historial y nuevo préstamo
+ok 1 - RF01/RF02: alta, consulta, devolución, historial y nuevo préstamo
+  ---
+  duration_ms: 116.8317
+  type: 'test'
+  ...
+# Subtest: RN01: segundo préstamo activo del mismo ejemplar se rechaza sin escribir
+ok 2 - RN01: segundo préstamo activo del mismo ejemplar se rechaza sin escribir
+  ---
+  duration_ms: 26.6294
+  type: 'test'
+  ...
+# Subtest: RN01: dos peticiones concurrentes tienen un solo ganador
+ok 3 - RN01: dos peticiones concurrentes tienen un solo ganador
+  ---
+  duration_ms: 15.1471
+  type: 'test'
+  ...
+# Subtest: RN02: ejemplar, préstamo y devolución inexistentes devuelven 404
+ok 4 - RN02: ejemplar, préstamo y devolución inexistentes devuelven 404
+  ---
+  duration_ms: 15.1134
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 1 rechazada con 400 sin escritura
+ok 5 - RN03: entrada inválida 1 rechazada con 400 sin escritura
+  ---
+  duration_ms: 11.1663
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 2 rechazada con 400 sin escritura
+ok 6 - RN03: entrada inválida 2 rechazada con 400 sin escritura
+  ---
+  duration_ms: 8.7819
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 3 rechazada con 400 sin escritura
+ok 7 - RN03: entrada inválida 3 rechazada con 400 sin escritura
+  ---
+  duration_ms: 9.2396
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 4 rechazada con 400 sin escritura
+ok 8 - RN03: entrada inválida 4 rechazada con 400 sin escritura
+  ---
+  duration_ms: 8.2521
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 5 rechazada con 400 sin escritura
+ok 9 - RN03: entrada inválida 5 rechazada con 400 sin escritura
+  ---
+  duration_ms: 11.0029
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 6 rechazada con 400 sin escritura
+ok 10 - RN03: entrada inválida 6 rechazada con 400 sin escritura
+  ---
+  duration_ms: 12.6593
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 7 rechazada con 400 sin escritura
+ok 11 - RN03: entrada inválida 7 rechazada con 400 sin escritura
+  ---
+  duration_ms: 9.249
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 8 rechazada con 400 sin escritura
+ok 12 - RN03: entrada inválida 8 rechazada con 400 sin escritura
+  ---
+  duration_ms: 9.3507
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 9 rechazada con 400 sin escritura
+ok 13 - RN03: entrada inválida 9 rechazada con 400 sin escritura
+  ---
+  duration_ms: 10.1082
+  type: 'test'
+  ...
+# Subtest: RN03: entrada inválida 10 rechazada con 400 sin escritura
+ok 14 - RN03: entrada inválida 10 rechazada con 400 sin escritura
+  ---
+  duration_ms: 10.5579
+  type: 'test'
+  ...
+# Subtest: RN03: fronteras de longitud aceptadas
+ok 15 - RN03: fronteras de longitud aceptadas
+  ---
+  duration_ms: 10.0197
+  type: 'test'
+  ...
+# Subtest: HTTP: JSON roto, cuerpo excesivo y ruta desconocida
+ok 16 - HTTP: JSON roto, cuerpo excesivo y ruta desconocida
+  ---
+  duration_ms: 12.5518
+  type: 'test'
+  ...
+# Subtest: Adaptador: las copias no permiten cambiar el estado almacenado
+ok 17 - Adaptador: las copias no permiten cambiar el estado almacenado
+  ---
+  duration_ms: 0.2159
+  type: 'test'
+  ...
+# Subtest: HTTP: paginación acotada y errores uniformes
+ok 18 - HTTP: paginación acotada y errores uniformes
+  ---
+  duration_ms: 17.6258
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 563.9622
+# start of coverage report
+# --------------------------------------------------------------------
+# file                | line % | branch % | funcs % | uncovered lines
+# --------------------------------------------------------------------
+# dist                |        |          |         | 
+#  src                |        |          |         | 
+#   composition       |        |          |         | 
+#    app.js           |  90.00 |    87.50 |  100.00 | 42-46
+#   modules           |        |          |         | 
+#    prestamos        |        |          |         | 
+#     application     |        |          |         | 
+#      servicio.js    | 100.00 |   100.00 |  100.00 | 
+#     domain          |        |          |         | 
+#      prestamo.js    | 100.00 |   100.00 |  100.00 | 
+#     infrastructure  |        |          |         | 
+#      memoria.js     | 100.00 |   100.00 |  100.00 | 
+#     presentation    |        |          |         | 
+#      rutas.js       | 100.00 |   100.00 |  100.00 | 
+# --------------------------------------------------------------------
+# all files           |  97.09 |    98.53 |  100.00 | 
+# --------------------------------------------------------------------
+# end of coverage report
+ACEPTADO: integridad, arquitectura, contrato, lint de herramientas, formato, TypeScript y pruebas HTTP/cobertura.
